@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F208E2701B6FF79400EF242D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F208E26F1B6FF79400EF242D /* main.cpp */; };
+		F208E2771B6FF83400EF242D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E2761B6FF83400EF242D /* CoreFoundation.framework */; };
+		F208E2791B6FF83B00EF242D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E2781B6FF83B00EF242D /* CoreGraphics.framework */; };
+		F208E27D1B70030A00EF242D /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E27C1B70030A00EF242D /* ServiceManagement.framework */; };
+		F208E27F1B70031900EF242D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E27E1B70031900EF242D /* Cocoa.framework */; };
+		F208E2801B70053200EF242D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E27A1B7002FB00EF242D /* IOKit.framework */; };
+		F208E2831B70092A00EF242D /* Resolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F208E2811B70092A00EF242D /* Resolution.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,13 @@
 /* Begin PBXFileReference section */
 		F208E26C1B6FF79400EF242D /* HSRetina */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HSRetina; sourceTree = BUILT_PRODUCTS_DIR; };
 		F208E26F1B6FF79400EF242D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F208E2761B6FF83400EF242D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F208E2781B6FF83B00EF242D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F208E27A1B7002FB00EF242D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		F208E27C1B70030A00EF242D /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		F208E27E1B70031900EF242D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F208E2811B70092A00EF242D /* Resolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resolution.cpp; sourceTree = "<group>"; };
+		F208E2821B70092A00EF242D /* Resolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolution.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F208E2801B70053200EF242D /* IOKit.framework in Frameworks */,
+				F208E27F1B70031900EF242D /* Cocoa.framework in Frameworks */,
+				F208E27D1B70030A00EF242D /* ServiceManagement.framework in Frameworks */,
+				F208E2791B6FF83B00EF242D /* CoreGraphics.framework in Frameworks */,
+				F208E2771B6FF83400EF242D /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +59,11 @@
 		F208E2631B6FF79400EF242D = {
 			isa = PBXGroup;
 			children = (
+				F208E27E1B70031900EF242D /* Cocoa.framework */,
+				F208E27C1B70030A00EF242D /* ServiceManagement.framework */,
+				F208E27A1B7002FB00EF242D /* IOKit.framework */,
+				F208E2781B6FF83B00EF242D /* CoreGraphics.framework */,
+				F208E2761B6FF83400EF242D /* CoreFoundation.framework */,
 				F208E26E1B6FF79400EF242D /* HSRetina */,
 				F208E26D1B6FF79400EF242D /* Products */,
 			);
@@ -58,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				F208E26F1B6FF79400EF242D /* main.cpp */,
+				F208E2811B70092A00EF242D /* Resolution.cpp */,
+				F208E2821B70092A00EF242D /* Resolution.h */,
 			);
 			path = HSRetina;
 			sourceTree = "<group>";
@@ -119,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F208E2701B6FF79400EF242D /* main.cpp in Sources */,
+				F208E2831B70092A00EF242D /* Resolution.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +155,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -171,6 +198,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -205,6 +233,7 @@
 		F208E2741B6FF79400EF242D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +241,7 @@
 		F208E2751B6FF79400EF242D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

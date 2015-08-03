@@ -6,10 +6,11 @@
 //  Copyright (c) 2015 satori. All rights reserved.
 //
 
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include "Resolution.h"
+int main() {
+    Resolution *res = new Resolution(2560, 1600);
+    res->Apply();
+    sleep(5);
+    res->Reset();
     return 0;
 }
