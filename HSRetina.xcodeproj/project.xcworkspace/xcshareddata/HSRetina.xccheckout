@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>20A6C153-C06B-4D46-BFAC-103A334DF179</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HSRetina</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>52E2B655EFD3E31E093848783B678E6CCD590C00</key>
+		<string>https://github.com/Razzile/HSRetina.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HSRetina.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>52E2B655EFD3E31E093848783B678E6CCD590C00</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Razzile/HSRetina.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>52E2B655EFD3E31E093848783B678E6CCD590C00</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>52E2B655EFD3E31E093848783B678E6CCD590C00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HSRetina</string>
+		</dict>
+	</array>
+</dict>
+</plist>

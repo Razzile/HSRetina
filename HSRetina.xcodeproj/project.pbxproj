@@ -14,6 +14,10 @@
 		F208E27F1B70031900EF242D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E27E1B70031900EF242D /* Cocoa.framework */; };
 		F208E2801B70053200EF242D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E27A1B7002FB00EF242D /* IOKit.framework */; };
 		F208E2831B70092A00EF242D /* Resolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F208E2811B70092A00EF242D /* Resolution.cpp */; };
+		F208E2AA1B70D9FA00EF242D /* Resolution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F208E2811B70092A00EF242D /* Resolution.cpp */; };
+		F208E2AB1B70D9FA00EF242D /* Resolution.h in Sources */ = {isa = PBXBuildFile; fileRef = F208E2821B70092A00EF242D /* Resolution.h */; };
+		F208E2AC1B70DA0600EF242D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E2781B6FF83B00EF242D /* CoreGraphics.framework */; };
+		F208E2AE1B70DA2300EF242D /* DylibMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F208E2AD1B70DA2300EF242D /* DylibMain.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +42,8 @@
 		F208E27E1B70031900EF242D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F208E2811B70092A00EF242D /* Resolution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Resolution.cpp; sourceTree = "<group>"; };
 		F208E2821B70092A00EF242D /* Resolution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Resolution.h; sourceTree = "<group>"; };
+		F208E2A51B70D9EE00EF242D /* libHSRetinaLib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libHSRetinaLib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F208E2AD1B70DA2300EF242D /* DylibMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DylibMain.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,14 @@
 				F208E27D1B70030A00EF242D /* ServiceManagement.framework in Frameworks */,
 				F208E2791B6FF83B00EF242D /* CoreGraphics.framework in Frameworks */,
 				F208E2771B6FF83400EF242D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F208E2A21B70D9EE00EF242D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F208E2AC1B70DA0600EF242D /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				F208E26C1B6FF79400EF242D /* HSRetina */,
+				F208E2A51B70D9EE00EF242D /* libHSRetinaLib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,11 +98,22 @@
 				F208E26F1B6FF79400EF242D /* main.cpp */,
 				F208E2811B70092A00EF242D /* Resolution.cpp */,
 				F208E2821B70092A00EF242D /* Resolution.h */,
+				F208E2AD1B70DA2300EF242D /* DylibMain.cpp */,
 			);
 			path = HSRetina;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F208E2A31B70D9EE00EF242D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		F208E26B1B6FF79400EF242D /* HSRetina */ = {
@@ -107,6 +133,23 @@
 			productReference = F208E26C1B6FF79400EF242D /* HSRetina */;
 			productType = "com.apple.product-type.tool";
 		};
+		F208E2A41B70D9EE00EF242D /* HSRetinaLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F208E2A81B70D9EE00EF242D /* Build configuration list for PBXNativeTarget "HSRetinaLib" */;
+			buildPhases = (
+				F208E2A11B70D9EE00EF242D /* Sources */,
+				F208E2A21B70D9EE00EF242D /* Frameworks */,
+				F208E2A31B70D9EE00EF242D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HSRetinaLib;
+			productName = HSRetinaLib;
+			productReference = F208E2A51B70D9EE00EF242D /* libHSRetinaLib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -117,6 +160,9 @@
 				ORGANIZATIONNAME = satori;
 				TargetAttributes = {
 					F208E26B1B6FF79400EF242D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F208E2A41B70D9EE00EF242D = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -134,6 +180,7 @@
 			projectRoot = "";
 			targets = (
 				F208E26B1B6FF79400EF242D /* HSRetina */,
+				F208E2A41B70D9EE00EF242D /* HSRetinaLib */,
 			);
 		};
 /* End PBXProject section */
@@ -145,6 +192,16 @@
 			files = (
 				F208E2701B6FF79400EF242D /* main.cpp in Sources */,
 				F208E2831B70092A00EF242D /* Resolution.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F208E2A11B70D9EE00EF242D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F208E2AE1B70DA2300EF242D /* DylibMain.cpp in Sources */,
+				F208E2AA1B70D9FA00EF242D /* Resolution.cpp in Sources */,
+				F208E2AB1B70D9FA00EF242D /* Resolution.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +303,32 @@
 			};
 			name = Release;
 		};
+		F208E2A61B70D9EE00EF242D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F208E2A71B70D9EE00EF242D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -263,6 +346,15 @@
 			buildConfigurations = (
 				F208E2741B6FF79400EF242D /* Debug */,
 				F208E2751B6FF79400EF242D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F208E2A81B70D9EE00EF242D /* Build configuration list for PBXNativeTarget "HSRetinaLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F208E2A61B70D9EE00EF242D /* Debug */,
+				F208E2A71B70D9EE00EF242D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

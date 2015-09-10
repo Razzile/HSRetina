@@ -1,27 +1,23 @@
 //
-//  main.cpp
+//  DylibMain.cpp
 //  HSRetina
 //
-//  Created by callum taylor on 03/08/2015.
+//  Created by callum taylor on 04/08/2015.
 //  Copyright (c) 2015 satori. All rights reserved.
 //
 
 #include "Resolution.h"
 
-void Close();
-
 Resolution *res = nullptr;
-int main() {
-    atexit(Close);
+
+__attribute__((constructor))
+void Init() {
     res = new Resolution(2560, 1600);
     res->Apply();
-    char c;
-    c = getchar();
-    return 0;
 }
 
-
-void Close() {
+__attribute__((destructor))
+void Exit() {
     res->Reset();
     delete res;
 }
